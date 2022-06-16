@@ -18,8 +18,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" aria-current="page" href="/attendance/index.php">Home</a>
-        <a class="nav-link" href="/attendance/viewrecords.php">View Attendees</a>
+        <a class="nav-link" aria-current="page" href="index.php">Home</a>
+        <a class="nav-link" href="viewrecords.php">View Attendees</a>
       </div>
     </div>
   </div>
