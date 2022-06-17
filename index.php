@@ -3,13 +3,14 @@ $title = "Index";
 require_once "includes/header.php";
 require_once "db/conn.php";
 
+
 ?>
 
 
 
 <h1 class="text-center">Registration for IT Conference</h1>
 
-<form method="post" action="success.php">
+<form method="post" action="success.php" enctype="multipart/form-data">
   <div class="form-group">
     <label for="firstname" class="form-label">First Name</label>
     <input type="text" required class="form-control" id="firstname" name="firstname">
@@ -41,10 +42,15 @@ require_once "db/conn.php";
   <div class="form-group">
     <label for="phone" class="form-label">Phone Number</label>
     <input type="text" class="form-control" id="phone" name="phone">
-    <div id="emailPhone" class="form-text">We'll never share your number  with anyone else.</div>
-  </div>
+    <small id="emailPhone" class="form-text-muted">We'll never share your number  with anyone else.</small>
+  </div><br>
+  <div class="mb-3">
+    <input class="form-control" accept="image/*" type="file" id="avatar" name="avatar">
+    <small id="avatar" class="form-text text-muted">File Upload is Optional</small>
+</div>
+<br>
   <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-</form>
+</form> 
 
 
 

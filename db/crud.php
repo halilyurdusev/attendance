@@ -7,10 +7,10 @@
             $this->db = $conn;
         }
 
-        public function insert($fname, $lname, $dob, $email, $contact, $specialty)
+        public function insert($fname, $lname, $dob, $email, $contact, $specialty, $avatar_path)
         {
             try {
-                $sql = "INSERT INTO attendee (firstname, lastname, dateofbirth, email, contactnumber, specialty_id) VALUES (:fname, :lname, :dob, :email, :contact, :specialty)";
+                $sql = "INSERT INTO attendee (firstname, lastname, dateofbirth, email, contactnumber, specialty_id, avatar_path) VALUES (:fname, :lname, :dob, :email, :contact, :specialty, :avatar_path)";
                 $stmt = $this->db->prepare($sql);
 
                 $stmt->bindparam(":fname", $fname);
@@ -19,6 +19,7 @@
                 $stmt->bindparam(":email", $email);
                 $stmt->bindparam(":contact", $contact);
                 $stmt->bindparam(":specialty", $specialty);
+                $stmt->bindparam(":avatar_path", $avatar_path);
 
                 $stmt->execute();
                 return true;
